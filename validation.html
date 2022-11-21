@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function mysub()
+    {
+        let a = asp.n.value
+        if(a == null || a=="")
+        {
+            alert("enter name")
+            return false
+        }
+
+        let b = asp.m.value
+        if(b == null || b == "")
+        {
+            alert("enter number")
+        }
+        else if(isNaN(b))
+        {
+            alert("enter only number")
+        }
+        if((asp.f[0].checked == false) &&(asp.f[1].checked==false))
+        {
+            alert("select one radio button")
+        }
+        if((asp.c[0].checked == false)&&
+        (asp.c[1].checked == false)&&
+        (asp.c[2].checked == false)&&
+        (asp.c[3].checked == false))
+        {
+            alert("check one box")
+        }
+
+        if(asp.s.value == "-1")
+        {
+            alert("select city")
+        }
+        
+        let h = asp.e.value
+        let atp = h.indexof("@")
+        let atl = h.lastIndexof(".")
+        if(atp<1|| atp+2 > atl || atl+2 >= h.length)
+        {
+            alert("please enter valid email address /n at position"+atp+"and/n"+atl)
+        }
+
+    }
+</script>
+<body>
+    <form name="asp" onsubmit="mysub()">
+        Name :<input type="text" name="n" size="6">
+        <input type="submit" value="submit"> 
+        <br>
+        <br>
+        <hr>
+        Number :<input type="text" name="m" size="10" maxlength="10">
+        <br>
+        <hr>
+        <br>
+        Gender : <input type="radio" name="f" value="male">MALE
+                <input type="radio" name="f" value="female">FEMALE<br><br><hr>
+
+        Select : <input type="checkbox" name="c" value="name">name
+         <input type="checkbox" name="c" value="sub">sub
+         <input type="checkbox" name="c" value="class">class
+         <input type="checkbox" name="c" value="roll">roll
+
+         <br>
+         <br>
+         <hr>
+
+        city : <select name="s">
+            <option value="-1" selected>select city</option>
+            <option value="ahm" >ahm</option>
+            <option value="raj" >raj</option>
+            <option value="jaipur" >jaipur</option>
+            <option value="udaipur" >udaipur</option>
+            <option value="rajkot" >rajkot</option>
+            </select>
+            <br>
+            <br>
+            <hr>
+
+        E-mail : <input type="text" name="e" size="10">
+
+    
+    </form>
+
+</body>
+</html>

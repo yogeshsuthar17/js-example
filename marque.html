@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function  myfn()
+    {   
+        
+    let a = document.getElementsByName("name1")[0].value
+    if(a == null || a == "")
+    {
+        document.getElementById("nameloc").innerHTML = "enter name"
+        return false
+    }
+    
+
+   
+    let b = document.getElementsByName("email")[0].value 
+    let atposition=b.indexOf("@") 
+    let dotposition=b.lastIndexOf(".") 
+        if(b == null || b =="")
+        {
+            document.getElementById("passwordloc").innerHTML = "enter email"
+            
+            
+        }
+        else if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length)
+            {  
+                document.getElementById("passwordloc").innerHTML = "enter valid email"
+                
+
+            
+        }
+
+    return false
+    }
+
+        
+</script>
+<body>
+    
+<form name="f1" onsubmit="return myfn()">   
+    Enter Name:<input type="text" name="name1">  
+    <span style='color:red' id="nameloc"></span> <br><br>
+    Enter E-Mail:<input type="text" name="email">  
+    <span style='color:red' id="passwordloc"></span> <br><br>
+    <input type="submit" value="register">   
+    </form>
+</body>
+</html>

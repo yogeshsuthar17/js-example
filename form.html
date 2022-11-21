@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        box-sizing: unset;    
+        }
+</style>
+<body> 
+    <fieldset>
+    <legend>application form</legend>
+    <form>
+    Enter : <input type="text" size="20" placeholder="enter name" required title="please enter the name"><br><br>
+    Email : <input type="text" size="20" placeholder="enter email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required title="please enter email address"><br><br>
+    Gender : <input type="radio" value="female" name="G">Male
+     <input type="radio" value="male" name="G">Female<br><br>
+    collage name : <input type="text" name="cn" size="20" required title="Enter collage name"><br><br>
+    Number : <input type="number" name="nn" size="10" required tittle="enter number in digit" pattern="[0-9]"><br><br>
+    <input type="submit" value="submit">
+    </form>
+    </fieldset>
+ 
+</body>
+</html>
